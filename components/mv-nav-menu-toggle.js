@@ -49,9 +49,7 @@ class NavMenuToggle extends BooleanToggle {
 }
 
 export default {
-  register: () => {
-    customElements.define(NavMenuToggle.inputId, NavMenuToggle);
-  },
+  register: NavMenuToggle.register.bind(NavMenuToggle),
   onpageshow: () => {
     const menuToggle = document.querySelector(`${NavMenuToggle.inputId} input[type="checkbox"]`);
     if (menuToggle && menuToggle.checked) {

@@ -56,9 +56,7 @@ class DarkToggle extends BooleanToggle {
 }
 
 export default {
-  register: () => {
-    customElements.define(DarkToggle.inputId, DarkToggle);
-  },
+  register: DarkToggle.register.bind(DarkToggle),
   onpageshow: () => {
     const useDarkMode = DarkToggle.userPrefersDark();
     const toggle = document.querySelector(`${DarkToggle.inputId} input`);

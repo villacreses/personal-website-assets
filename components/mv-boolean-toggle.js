@@ -22,6 +22,10 @@ export default class BooleanToggle extends HTMLElement {
     }
   }
 
+  static register() {
+    customElements.define(this.inputId, this);
+  }
+
   buildElements() {
     this.classList.add('boolean-toggle');
     this.innerHTML = `
