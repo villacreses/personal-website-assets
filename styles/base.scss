@@ -4,7 +4,10 @@
 
 :root {
   --z-index-max: 99999;
-  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-timing: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition: background-color var(--transition-timing),
+                transform var(--transition-timing),
+                opacity var(--transition-timing);
   --transform-bounce: translateY(-3px) scale(1.003);
   --topnav-height: 53px;
 }
