@@ -172,6 +172,14 @@ p {
   font-weight: 500;
 }
 
+.muted {
+  color: rgb(var(--text-muted-rgb));
+}
+
+.bold {
+  font-weight: bold;
+}
+
 @media (min-width: 40rem) {
   .mobile-only {
     display: none;
