@@ -123,6 +123,9 @@ hr {
 }
 %prose-line-break {
   margin-bottom: .75rem;
+  @media(min-width: 40rem) {
+    margin-bottom: 1.25rem;
+  }
 }
 .prose {
   @extend %prose-color;
@@ -164,12 +167,16 @@ p {
 }
 
 .lead, p.lead {
-  margin: 1.5rem 0 .5rem 0;
+  margin: 1.75rem 0 .5rem 0;
   color: rgb(var(--text-lead-rgb));
   padding-bottom: .75rem;
   font-size: var(--text-lg-font-size);
   line-height: var(--text-lg-line-height);
   font-weight: 500;
+  
+  @media(min-width: 40rem) {
+    margin: 1.75rem 0 .75rem 0;
+  }
 }
 
 .muted {
